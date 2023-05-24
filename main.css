@@ -1,0 +1,295 @@
+body {
+  padding-top: 40px;
+  background: #EAEAEA;
+}
+
+/* верхняя панель */
+#sticky-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px;
+}
+
+#sticky-menu a {
+  margin-left: 55px;
+  text-decoration: none;
+  color: #333;
+}
+
+#sticky-menu a.active {
+  font-weight: bold;
+}
+
+#themeToggle {
+  margin-left: 940px;
+  font-size: 17px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  border: none;
+  border-radius: 30px;
+  color: #333;
+  background-color: #EAEAEA;
+}
+
+.light-theme {
+  background-color: #fff;
+  color: #333;
+}
+
+/* кнопка передвижения наверх страницы */
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: white;
+  color: #FF8C00;
+  font-size: 24px;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #555;
+}
+
+/* категории с карточками товаров */
+#category1, 
+#category2, 
+#category3 {
+  margin-left: 55px;
+  margin-right: 55px;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 30px;
+}
+
+.product-card img {
+  width: 220px;
+  height: 237px;
+}
+
+.product-card h3 {
+  margin-top: 10px;
+  font-family: 'Montserrat';
+  font-style: normal;
+}
+
+.product-card p {
+  margin: 5px 0;
+  font-family: 'Montserrat';
+  font-style: normal;
+}
+
+.product-card .price {
+  color: #FFA500;
+  font-weight: 600;
+}
+
+.product-card .buy-button {
+  padding: 5px 10px;
+  font-size: 17px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  border: none;
+  background-color: transparent;
+  color: #000000;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.product-card .buy-button:hover {
+  color: #FF8C00;
+}
+
+/* неупорядоченный список категорий товаров внизу страниц */
+#categoryList {
+  margin-left: 55px;
+  margin-right: 55px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 30px 30px 0px 0px;
+}
+
+#categoryList li{
+  margin-bottom: 10px;
+}
+
+#categoryList li a{
+  font-family: 'Montserrat';
+  font-style: normal;
+  text-decoration: none;
+  color: #333;
+}
+
+#categoryList li a.active {
+  font-weight: bold;
+}
+
+
+/* форма окна по нажатию кнопки купить */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 9999;
+}
+
+.form-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 10000;
+}
+
+.form-container input,
+.form-container textarea {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-container textarea {
+  display: flex;
+  resize: vertical;
+  width: 100%;
+}
+
+.form-container button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-container button[type="button"] {
+  background-color: #f44336;
+  margin-left: 10px;
+}
+
+.form-container button[type="submit"] {
+  background-color: #FF8C00;
+}
+
+.form-container label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* темная тема */
+#themeToggle.dark-theme{
+  color: #fff;
+  background-color: #333;
+}
+
+.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+#sticky-menu.dark-theme{
+  background-color: #555;
+}
+#sticky-menu a.dark-theme {
+  color: #fff;
+  background-color: #555;
+}
+.product-card.dark-theme {
+  background-color: #555;
+}
+.product-card .buy-button.dark-theme {
+  color: #fff;
+}
+.product-card .buy-button.dark-theme:hover {
+  color: #FF8C00;
+}
+
+#categoryList.dark-theme {
+  background: #555;
+}
+
+#categoryList li a.dark-theme{
+  color: white;
+  background-color: #555;
+}
+
+.form-container.dark-theme{
+  background-color: #444;
+}
+
+#scrollToTopBtn.dark-theme {
+  background-color: #555;
+}
+
+#scrollToTopBtn.dark-theme:hover {
+  background-color: white;
+}
+
+
+/* адаптация под разную ширину экрана */
+@media screen and (max-width: 1200px) {
+  .product-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #themeToggle {
+    margin-left: 700px
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .product-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #themeToggle {
+    margin-left: 500px
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .product-container {
+    grid-template-columns: 1fr;
+  }
+  #themeToggle {
+    margin-left: 250px
+  }
+}

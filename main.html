@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Входное задание Digital Design</title>
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+
+<!-- Верхнее меню с категориями товаров -->
+  <nav id="sticky-menu">
+    <a href="#category1">Наушники</a>
+    <a href="#category2">Беспроводные наушники</a>
+    <a href="#category3">Компьютерные мыши</a>
+    <button id="themeToggle">Темная тема</button>
+  </nav>
+
+<!-- Кнопка перемещения наверх страницы -->
+  <button id="scrollToTopBtn" title="Наверх">&#8679;</button>
+
+<!-- Шаблон для первой категории товаров (Наушники) -->
+  <section id="category1">
+    <h2>Наушники</h2>
+    <div class="product-container">
+      <div class="product-card">
+        <img class = "image" alt="Наушники">
+        <h3></h3>
+        <p class = "price"></p>
+        <p class = "AddDate"></p>
+        <button class="buy-button">Купить</button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Шаблон для второй категории товаров (Беспроводные наушники) -->
+  <section id="category2">
+    <h2>Беспроводные наушники</h2>
+    <div class="product-container">
+      <div class="product-card">
+        <img class = "image" alt="Наушники">
+        <h3></h3>
+        <p class = "price"></p>
+        <p class = "AddDate"></p>
+        <button class="buy-button">Купить</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Шаблон для третьей категории товаров (Компьютерные мыши) -->
+  <section id="category3">
+    <h2>Компьютерные мыши</h2>
+    <div class="product-container">
+      <div class="product-card">
+        <img class = "image" alt="Наушники">
+        <h3></h3>
+        <p class = "price"></p>
+        <p class = "AddDate"></p>
+        <button class="buy-button">Купить</button>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Неупорядоченный список категорий товаров внизу страницы -->
+  <ul id="categoryList">
+    <li><a href="#category1">Наушники</a></li>
+    <li><a href="#category2">Беспроводные наушники</a></li>
+    <li><a href="#category3">Компьютерные мыши</a></li>
+  </ul>
+
+
+  <!-- Форма покупки товаров после нажатия на кнопки "Купить" в карточке товаров -->
+  <div class="overlay"></div>
+  <div class="form-container">
+    <form id="purchaseForm">
+      <label for="quantityInput">Количество:</label>
+      <input type="number" id="quantityInput" min="1" required>
+      
+      <label>Цвет:</label>
+      <input type="radio" name="color" value="black" required> Черный
+      <input type="radio" name="color" value="white"> Белый
+      <input type="radio" name="color" value="red"> Красный
+      <input type="radio" name="color" value="green"> Зеленый
+      
+      <label for="commentInput">Комментарий:</label>
+      <textarea id="commentInput" rows="4" maxlength="2000" placeholder="Необязательно для заполнения (не больше 2000 символов)"></textarea>
+      
+      <button type="submit">Купить</button>
+      <button type="button" id="closeButton">Закрыть</button>
+    </form>
+  </div>
+
+</body>
+</html>
